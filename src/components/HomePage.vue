@@ -26,13 +26,13 @@
         </div>
       </div>
       
-      <div class="game-card blackjack-card coming-soon">
+      <div class="game-card blackjack-card" @click="goToBlackJack">
         <div class="game-overlay"></div>
         <div class="game-content">
           <div class="game-icon"></div>
-          <h2>Блэкджек</h2>
-          <p>21 очко против дилера. Скоро</p>
-          <button class="play-btn disabled" disabled>Скоро</button>
+          <h2>BlackJack</h2>
+          <p>21 очко против дилера. Испытай удачу!</p>
+          <button class="play-btn">Играть</button>
         </div>
       </div>
     </div>
@@ -50,6 +50,10 @@ const goToSausage = () => {
 
 const goToRoulette = () => {
   router.push('/roulette')
+}
+
+const goToBlackJack = () => {
+  router.push('/blackjack')
 }
 </script>
 
@@ -95,30 +99,23 @@ const goToRoulette = () => {
   background-position: center;
 }
 
-.game-card:hover:not(.coming-soon) {
+.game-card:hover {
   transform: translateY(-10px);
   box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
 }
 
-.game-card.coming-soon {
-  cursor: not-allowed;
-  opacity: 0.8;
-}
-
-/* Фоновые картинки */
 .sausage-card {
-  background-image: url('../../img/sausage-bg.png');
+  background-image: url('../img/sausage-bg.png');
 }
 
 .roulette-card {
-  background-image: url('../../img/roulette-bg.jpg');
+  background-image: url('../img/roulette-bg.png');
 }
 
 .blackjack-card {
-  background-image: url('../../img/blackjack-bg.jpg');
+  background-image: url('../img/blackjack-bg.png');
 }
 
-/* Затемнение фона */
 .game-overlay {
   position: absolute;
   top: 0;
@@ -129,7 +126,7 @@ const goToRoulette = () => {
   transition: background 0.3s;
 }
 
-.game-card:hover:not(.coming-soon) .game-overlay {
+.game-card:hover .game-overlay {
   background: rgba(0, 0, 0, 0.5);
 }
 
@@ -175,14 +172,8 @@ const goToRoulette = () => {
   margin: 0 auto;
 }
 
-.play-btn:hover:not(.disabled) {
+.play-btn:hover {
   background: #e6c200;
   transform: scale(1.05);
-}
-
-.play-btn.disabled {
-  background: #555;
-  color: #888;
-  cursor: not-allowed;
 }
 </style>

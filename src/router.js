@@ -1,6 +1,8 @@
 import { createRouter, createWebHistory } from 'vue-router'
 import HomePage from './components/HomePage.vue'
-import SausageGame from './components/Sausage/SausageGame.vue'
+import SausageGame from './components/Games/Sausage/SausageGame.vue'
+import RouletteGame from './components/Games/Roulette/RouletteGame.vue'
+import BlackJackGame from './components/Games/BlackJack/BlackJack.vue'
 import DepositPage from './components/DepositPage.vue'
 
 const routes = [
@@ -13,6 +15,16 @@ const routes = [
     path: '/sausage',
     name: 'Sausage',
     component: SausageGame
+  },
+  {
+    path: '/roulette',
+    name: 'Roulette',
+    component: RouletteGame
+  },
+  {
+    path: '/blackjack',
+    name: 'BlackJack',
+    component: BlackJackGame
   },
   {
     path: '/deposit',

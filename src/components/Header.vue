@@ -2,13 +2,14 @@
   <header class="header">
     <div class="container">
       <div class="logo" @click="$router.push('/')">
-        <span class="title">PokeChupa.money</span>
+        <span class="title">PokeChups.money</span>
       </div>
       
       <nav>
         <RouterLink to="/" class="nav-link">Главная</RouterLink>
         <RouterLink to="/sausage" class="nav-link">Sausage Game</RouterLink>
         <RouterLink to="/roulette" class="nav-link">Рулетка</RouterLink>
+        <RouterLink to="/blackjack" class="nav-link">BlackJack</RouterLink>
       </nav>
       
       <div class="user-info">
@@ -57,6 +58,7 @@ onUnmounted(() => {
   background: #0f0f1a;
   padding: 15px 0;
   border-bottom: 1px solid rgba(255, 215, 0, 0.3);
+  margin: 10px;
 }
 
 .container {
